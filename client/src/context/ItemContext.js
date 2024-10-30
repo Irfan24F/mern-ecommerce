@@ -15,6 +15,7 @@ function CustomItemContext({ children }) {
         return cart.reduce((total, product) => total + product.price, 0);
     });
 
+<<<<<<< HEAD
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -27,6 +28,16 @@ function CustomItemContext({ children }) {
                 console.error("Error fetching products:", error);
             }
         };
+=======
+	useEffect(() => {
+	
+		const fetchData = async () => {
+			const response = await fetch("https://ecommerce-bookstore-website-using-mern.onrender.com");
+			const products = await response.json();
+			console.log(products);
+			setProducts(products);
+		};
+>>>>>>> origin/main
 
         fetchData();
     }, []);
