@@ -1,5 +1,3 @@
-
-
 import React, { useContext, useEffect, useState } from "react";
 import ProductItem from "./ProductItem";
 import { itemContext } from "../context/ItemContext";
