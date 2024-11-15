@@ -19,7 +19,7 @@ function CustomItemContext({ children }) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("https://ecommerce-bookstore-website-using-mern-stack-mb1d.vercel.app/");
+                const response = await fetch("https://ecommerce-bookstore-website-using-mern-9315.onrender.com/");
                 if (!response.ok) throw new Error("Failed to fetch products");
                 const products = await response.json();
                 console.log(products);
@@ -32,7 +32,7 @@ function CustomItemContext({ children }) {
 	useEffect(() => {
 	
 		const fetchData = async () => {
-			const response = await fetch("https://ecommerce-bookstore-website-using-mern.onrender.com");
+			const response = await fetch("https://ecommerce-bookstore-website-using-mern-9315.onrender.com/");
 			const products = await response.json();
 			console.log(products);
 			setProducts(products);
