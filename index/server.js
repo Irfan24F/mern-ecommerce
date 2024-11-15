@@ -9,17 +9,16 @@ const multer = require('multer');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-
 app.use(express.json());
 app.use(cors());
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
+
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {
@@ -27,14 +26,13 @@ db.once('open', () => {
     seedDatabase(); 
 });
 
-
 const bookSchema = new mongoose.Schema({
     title: String,
     author: String,
     genre: String,
     description: String,
     price: Number,
-    image: String, 
+    image: String,
 });
 
 const Book = mongoose.model('Book', bookSchema);
@@ -65,34 +63,33 @@ const seedDatabase = async () => {
                 author: 'George Orwell', 
                 genre: 'Dystopian', 
                 description: 'A dystopian vision of a totalitarian future society', 
-                price: 255, 
+                price: 25, // Corrected price
                 image: '/uploads/b3.jpg' 
             }, 
             {
                 title: 'Inception',
-                director: 'Christopher Nolan',
+                author: 'Christopher Nolan', // Changed from director to author
                 genre: 'Science Fiction',
                 description: 'A thief uses dream-sharing technology to plant an idea into a C.E.O.',
-                price: 299,
+                price: 30, // Corrected price
                 image: '/uploads/b4.jpg'
             },
             {
                 title: 'The Shawshank Redemption',
-                director: 'Frank Darabont',
+                author: 'Frank Darabont', // Changed from director to author
                 genre: 'Drama',
                 description: 'Two imprisoned men bond and find redemption.',
-                price: 199,
+                price: 20, // Corrected price
                 image: '/uploads/b5.jpg'
             },
             {
                 title: 'The Godfather',
-                director: 'Francis Ford Coppola',
+                author: 'Francis Ford Coppola', // Changed from director to author
                 genre: 'Crime, Drama',
                 description: 'A crime dynasty patriarch transfers control to his son.',
-                price: 250,
+                price: 25, // Corrected price
                 image: '/uploads/b6.jpg'
             }
-            
         ];
 
         await Book.insertMany(books);
