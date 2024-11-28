@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(express.json());
 app.use(cors({
-    origin:["https://deploy-mern-1whq.vercel.app"], 
+    origin:["https://mern-ecommerce-1-ten.vercel.app"], 
     methods:["POST","GET"], 
     credentials:true
 }));
