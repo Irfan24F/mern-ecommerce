@@ -117,8 +117,8 @@ app.get('/api/books', async (req, res) => {
 });
 
 // Frontend Fallback
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'));
+app.get('/', (req, res) => {
+    res.json("Hello");
 });
 
 // Start Server
