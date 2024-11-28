@@ -12,7 +12,7 @@ const ProductItem = ({ product }) => {
         <div className="product-card">
             <img
                 className="product-image"
-                src={`https://ecommerce-bookstore-website-using-mern-9315.onrender.com/${product.image}`}
+                src={`http://localhost:5000${product.image}`}
                 alt={product.title}
             />
             <div className="product-details">

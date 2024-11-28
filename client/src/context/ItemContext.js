@@ -1,7 +1,9 @@
 import { createContext, useState, useEffect, useCallback } from "react";
 
+// Create the context
 const itemContext = createContext();
 
+// Define the CustomItemContext component
 function CustomItemContext({ children }) {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState(() => {
@@ -16,7 +18,7 @@ function CustomItemContext({ children }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://ecommerce-bookstore-website-using-mern-9315.onrender.com/");
+        const response = await fetch("http://localhost:5000/api/books");
         if (!response.ok) throw new Error("Failed to fetch products");
         const products = await response.json();
         setProducts(products);
@@ -67,5 +69,6 @@ function CustomItemContext({ children }) {
   );
 }
 
+// Export the context and default component
 export { itemContext };
 export default CustomItemContext;
