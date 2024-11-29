@@ -18,7 +18,7 @@ function CustomItemContext({ children }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://ecommerce-bookstore-website-using-mern-9315.onrender.com/api/books");
+        const response = await fetch("https://ecommerce-bookstore-website-using-mern-9315.onrender.com/api/books");
         if (!response.ok) throw new Error("Failed to fetch products");
         const products = await response.json();
         setProducts(products);
