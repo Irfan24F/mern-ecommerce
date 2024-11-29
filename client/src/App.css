@@ -113,47 +113,4 @@ h2 {
     border-radius: 10px;
 }
 
-/* Styles for Login and Signup */
-.login-signup-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Full viewport height */
-    background-color: #f9f9f9; /* Light background color */
-}
 
-.login-signup-form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.login-signup-form h2 {
-    margin-bottom: 20px;
-    color: #333; /* Dark color for text */
-}
-
-.login-signup-form input {
-    margin: 10px 0;
-    padding: 10px;
-    width: 300px; /* Set a consistent width for input fields */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.login-signup-form button {
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%; /* Full width button */
-    margin-top: 10px; /* Spacing above the button */
-}
-
-.login-signup-form button:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
