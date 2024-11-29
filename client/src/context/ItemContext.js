@@ -18,7 +18,7 @@ function CustomItemContext({ children }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://mern-ecommerce-49jd.vercel.app/api/books");
+        const response = await fetch("https://mern-ecommerce-49jd.vercel.app/api/books");
         if (!response.ok) throw new Error("Failed to fetch products");
         const products = await response.json();
         setProducts(products);
