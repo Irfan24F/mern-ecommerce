@@ -7,12 +7,15 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
+// Middleware to handle CORS
 app.use(express.json());
 app.use(cors({
-    origin:["https://mern-ecommerce-8dif.vercel.app"], 
-    methods:["POST","GET"], 
-    credentials:true
+    origin: [
+        "https://mern-ecommerce-8dif.vercel.app", // Your Vercel frontend URL
+        "http://localhost:3000", // Allow local development, change as needed
+    ],
+    methods: ["POST", "GET", "PUT", "DELETE"], // Define methods as needed
+    credentials: true, // If you're using cookies or authentication
 }));
 
 // Static Files
@@ -123,5 +126,5 @@ app.get('/', (req, res) => {
 
 // Start Server
 app.listen(PORT, () => {
-    console.log('Server is running on port ${PORT}');
+    console.log(`Server is running on port ${PORT}`);
 });
