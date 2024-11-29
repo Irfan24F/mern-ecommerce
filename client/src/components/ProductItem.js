@@ -12,7 +12,7 @@ const ProductItem = ({ product }) => {
         <div className="product-card">
             <img
                 className="product-image"
-                src={`http://mern-ecommerce-49jd.vercel.app${product.image}`}
+                src={`https://mern-ecommerce-49jd.vercel.app${product.image}`}
                 alt={product.title}
             />
             <div className="product-details">
